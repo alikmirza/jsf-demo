@@ -41,5 +41,4 @@ public class JsfSpringBootApplication implements ServletContextAware {
         servletContext.setInitParameter("javax.faces.FACELETS_SKIP_COMMENTS", "true");
     }
 
-
 }

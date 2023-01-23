@@ -4,38 +4,36 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:h="http://java.sun.com/jsf/html">
 
 <h:head>
     <title>JSF Demo Project</title>
-    <link href="${facesContext.externalContext.requestContextPath}/ui/css/style.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="${facesContext.externalContext.requestContextPath}/ui/js/script.js"></script>
-
 </h:head>
 
 <h:body>
     <h2>Employees List</h2>
     <hr/>
     <br/>
-    <h:dataTable value="#{employeeController.employees}" var="employee" border="1" id="table-employees">
+    <p:dataTable value="#{employeeController.employees}" var="employee" border="1" id="table-employees">
 
-        <h:column>
+        <p:column>
             <f:facet name="header">Name</f:facet>
             #{employee.name}
-        </h:column>
+        </p:column>
 
-        <h:column>
+        <p:column>
             <f:facet name="header">Department</f:facet>
             #{employee.department}
-        </h:column>
+        </p:column>
 
-        <h:column>
+        <p:column>
             <f:facet name="header">Email</f:facet>
             #{employee.email}
-        </h:column>
+        </p:column>
 
-    </h:dataTable>
-    <h:button styleClass="button" value="Add Employee" outcome="create-employee-form"/>
+    </p:dataTable>
+    <p:button styleClass="button" value="Add Employee" outcome="create-employee-form"/>
 </h:body>
 
 </html>
